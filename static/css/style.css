@@ -325,7 +325,7 @@ section {
 
 .about .content ul li {
   margin-bottom: 20px;
-  display: flex;
+  display: block;
   align-items: center;
 }
 
@@ -340,10 +340,20 @@ section {
   line-height: 0;
 }
 
+.about .content ul span {
+  display: inline-block;
+}
+
 .about .content p:last-child {
   margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .about .content ul span {
+    display: block;
+    margin-left: 25px;
+  }
+}
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
