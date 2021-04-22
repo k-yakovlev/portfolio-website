@@ -1,7 +1,10 @@
-from flask import Flask, render_template
 import datetime
+import os
+
+from flask import Flask, render_template
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = os.getenv('APP_SECRET_KEY')
 
 current_year = datetime.date.today().year
 
